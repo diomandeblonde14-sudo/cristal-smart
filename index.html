@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cristal Smart Solutions | Création Site Web & Caméras en Côte d'Ivoire,ferkessedougou</title>
+<meta name="description" content="Cristal Smart Solutions est une entreprise spécialisée en création de sites web, design graphique, installation de caméras de surveillance et solutions GPS à Ferké en Côte d'Ivoire.">
+
+<meta name="keywords" content="création site web Côte d'Ivoire, design graphique Ferké, installation caméra de surveillance, solution GPS véhicule, agence digitale Côte d'Ivoire">
+
+<meta name="author" content="Cristal Smart Solutions">
+
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="Cristal Smart Solutions - Innovation Digitale & Sécurité">
+
+<meta property="og:description" content="Développement web, design graphique, caméras de surveillance et GPS en Côte d'Ivoire.">
+
+<meta property="og:type" content="website">
+
+<meta property="og:image" content="image/logo.png">
+
+<meta property="og:locale" content="fr_FR">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:'Montserrat',sans-serif;
+background:#0b0f1a;
+color:white;
+overflow-x:hidden;
+}
+
+/* LOADER */
+#loader{
+position:fixed;
+width:100%;
+height:100%;
+background:#0b0f1a;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+font-size:30px;
+letter-spacing:5px;
+animation:fadeOut 1s ease forwards;
+animation-delay:2s;
+}
+@keyframes fadeOut{
+to{opacity:0;visibility:hidden}
+}
+
+/* NAV */
+nav{
+position:fixed;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+nav img{width:120px}
+nav a{
+color:white;
+text-decoration:none;
+margin-left:30px;
+font-weight:500;
+transition:0.3s;
+}
+nav a:hover{color:#22c55e}
+
+/* HERO */
+header{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+url("https://images.unsplash.com/photo-1492724441997-5dc865305da7");
+background-size:cover;
+background-position:center;
+}
+header h1{
+font-size:60px;
+font-weight:900;
+}
+header p{
+margin-top:20px;
+font-size:20px;
+opacity:0.8;
+}
+.btn{
+margin-top:30px;
+padding:15px 40px;
+background:#22c55e;
+border-radius:50px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+transition:0.3s;
+}
+.btn:hover{
+background:#16a34a;
+transform:scale(1.05);
+}
+
+/* SECTION */
+section{
+padding:120px 80px;
+text-align:center;
+opacity:0;
+transform:translateY(50px);
+transition:1s;
+}
+section.show{
+opacity:1;
+transform:translateY(0);
+}
+h2{
+font-size:40px;
+margin-bottom:60px;
+color:#0ae159;
+}
+
+/* SERVICES */
+.services{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:50px;
+}
+.card{
+background:rgba(255,255,255,0.05);
+padding:50px;
+width:300px;
+border-radius:25px;
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,0.1);
+transition:0.4s;
+}
+.card:hover{
+transform:translateY(-20px);
+background:rgba(34,197,94,0.1);
+}
+
+/* PROJECTS */
+.gallery{
+display:flex;
+flex-wrap:wrap;
+gap:40px;
+justify-content:center;
+}
+.gallery img{
+width:350px;
+border-radius:25px;
+transition:0.5s;
+}
+.gallery img:hover{
+transform:scale(1.08);
+}
+
+/* CONTACT */
+form{
+max-width:600px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+input,textarea{
+padding:15px;
+border-radius:10px;
+border:none;
+outline:none;
+}
+button{
+padding:15px;
+background:#22c55e;
+border:none;
+color:white;
+font-weight:bold;
+border-radius:10px;
+cursor:pointer;
+transition:0.3s;
+}
+button:hover{
+background:#16a34a;
+}
+
+/* FOOTER */
+footer{
+background:#080808;
+padding:40px;
+text-align:center;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#22c55e;
+padding:15px 25px;
+border-radius:50px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+box-shadow:0 5px 20px rgba(35, 31, 63, 0.5);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+.services,.gallery{flex-direction:column;align-items:center}
+header h1{font-size:40px}
+}
+.item{
+text-align:center;
+background:#2e2f30;
+padding:15px;
+border-radius:15px;
+}
+
+.item h3{
+margin:10px 0 5px;
+font-size:18px;
+color:#22c55e;
+}
+
+.item p{
+font-size:14px;
+color:#cbd5e1;
+}
+</style>
+</head>
+
+<body>
+
+<div id="loader">CRISTAL SMART</div>
+
+<nav>
+<img src="image/logo.png">
+<div>
+<a href="#about">À propos</a>
+<a href="#services">Services</a>
+<a href="#projects">Projets</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<header>
+<h1>CRISTAL SMART SOLUTIONS</h1>
+<p>Innovation Digitale • Sécurité • Excellence</p>
+<a href="#contact" class="btn">Demander un devis</a>
+</header>
+
+<section id="about">
+<h2>À propos</h2>
+<P><h1 style="margin-top:60px;color:#eda109;">CRISTAL SMART SOLUTION</h1></P>
+<p><h3>
+Chez Cristal Smart, nous aidons les entreprises, commerçants et entrepreneurs à moderniser leur activité grâce à des solutions numériques innovantes, rapides et efficaces.
+
+Basée à Ferké Kafalavogo, notre entreprise met la technologie au service du développement local.Nous créons des solutions digitales et de sécurité professionnelle et de qualité.
+Notre mission est d'accompagner entreprises et particuliers vers l'excellence technologique.
+</h3></p>
+<p><h3 style="margin-top:60px;color:#09fa0dc0;"></h3>
+    <img src="image/certificat.png" style="width:100%; max-width:1000px;">
+</section>
+
+<section id="services">
+<h2>Nos Expertises</h2>
+<div class="services">
+<div class="card"><h3>Développement Web</h3><p>Solutions digitales developpement web et logiciel.</p></div>
+<div class="card"><h3>Design Graphique</h3><p>Identité visuelle packagig, branding charte graphique professionnelle.</p></div>
+<div class="card"><h3>Caméras HD</h3><p>Installation propre et professionnelle de camera de surveillance.</p></div>
+<div class="card"><h3>Solutions GPS</h3><p>Géolocalisation et controle a distance intelligente.</p></div>
+<div class="card"><h3>imppression et personnalisation.</h3><p>Nous personnalisons et donnons vie a vos objet du quotidiens</p></div>
+</div>
+</section>
+<section id="projects">
+<h2>Nos Réalisations</h2>
+
+<!-- DESIGN GRAPHIQUE -->
+<h2 style="margin-top:60px;color:#ed7009;">DESIGN GRAPHIQUE</h2>
+<div class="gallery">
+<div class="item design">
+    <img src="image/design/affiche1.png">
+<img src="image/design/affiche2.jpeg">
+<img src="image/design/affiche9.png">
+<img src="image/design/affiche10.png">
+<img src="image/design/affiche14.png">
+<h2 style="margin-top:60px;color:#ca7c07;">AFFICHE EVENEMENTIELLE</h2>
+<P>Ces affiche sont concus pour la pub et la communication au toure de vos evenements.</P>
+</div>
+<div>
+<img src="image/design/affiche4.png">
+<img src="image/design/affiche5.png">
+<img src="image/design/affiche6.png">
+<img src="image/design/affiche7.png">
+<img src="image/design/affiche8.png">
+<img src="image/design/affiche11.png">
+<img src="image/design/affiche12.png">
+<img src="image/design/affiche13.png">
+<h2 style="margin-top:60px;color:#ca7c07;">AFFICHE A IMPRIMER</h2>
+<P>Nous creons des visuel pour evenements,pub bisness et bien d'autre adaptar a tout type d'impression. </P>
+</div>
+<img src="image/design/affiche3.png">
+
+</div>
+
+<!-- DEVELOPPEMENT WEB -->
+<h2 style="margin-top:60px;color:#f17c0f;">DEVELOPPEMENT WEB</h2>
+<div class="gallery">
+<img src="image/web/site1.png">
+<img src="image/web/site2.png">
+</div>
+
+<!-- CAMERA -->
+ <!-- CAMERA LITE -->
+<h2 style="margin-top:60px;color:#ca7c07;">CAMERA DE SURVEILLANCE </h2>
+<div class="gallery">
+    <div class="item design">
+    <img src="image/camera/camera1.png"> <img src="image/camera/camera.png"> <img src="image/camera/camera6.jpeg"><img src="image/camera/camera9.jpeg"><img src="image/camera/camera10.jpeg">
+    <h2 style="margin-top:60px;color:#ca7c07;">CAMERA DAHUA LITE</h2>
+    <p>La Dahua Infrarouge est une caméra de vidéosurveillance fiable et performante conçue pour assurer une protection efficace 24h/24.
+
+Grâce à sa technologie infrarouge (IR), elle capture des images claires même dans l’obscurité totale en passant automatiquement en mode noir et blanc la nuit.
+
+Elle est idéale pour sécuriser les maisons, commerces et entreprises à un coût abordable.
+
+ Caractéristiques principales :
+
+✅ Résolution HD / Full HD (2MP selon modèle)
+
+✅ Vision nocturne infrarouge jusqu’à 20m – 30m
+
+✅ Basculement automatique jour/nuit
+
+✅ Objectif fixe haute qualité
+
+✅ Protection IP67 (résiste à la pluie et à la poussière)
+
+✅ Compatible DVR / XVR Dahua
+
+✅ Installation intérieure et extérieure
+
+ Idéal pour :
+
+Maisons
+
+Boutiques
+
+Entrepôts
+
+Parkings
+
+Bureaux
+
+💡 Avantages :
+
+✔️ Surveillance même dans le noir total
+✔️ Installation simple
+✔️ Bon rapport qualité/prix
+✔️ Sécurité fiable et durable</p>
+</div>
+<!-- CAMERA FULLCOLORS -->
+<div class="item design"> 
+    <img src="image/camera/camera11.jpeg"> <img src="image/camera/camera12.jpeg"><img src="image/camera/camera13.jpeg"><img src="image/camera/camera14.jpeg">
+<h2 style="margin-top:60px;color:#ca7c07;">CAMERA DAHUA FULL-COLORS</h2>
+<p>Caméra de Surveillance Dahua Full-Color
+
+La caméra Dahua Full-Color est une solution de vidéosurveillance innovante conçue pour offrir des images en couleurs vives 24h/24, même dans l’obscurité totale. Contrairement aux caméras classiques qui passent en noir et blanc la nuit, la technologie Full-Color garantit une visibilité claire et détaillée en permanence.
+
+Grâce à son capteur haute sensibilité et son éclairage LED intégré, elle capture des images nettes avec un excellent niveau de détail, permettant une meilleure identification des personnes, des véhicules et des objets.
+
+Caractéristiques principales :
+
+✅ Image en couleur jour et nuit
+
+✅ Haute résolution (2MP / 4MP selon modèle)
+
+✅ Vision nocturne puissante avec LED blanche
+
+✅ Détection intelligente de mouvement
+
+✅ Boîtier robuste résistant aux intempéries (IP67)
+
+✅ Installation (intérieur et extérieur)
+
+✅ Compatible avec enregistreur DVR/NVR
+
+ Idéal pour :
+
+Maisons et résidences
+
+Boutiques et commerces
+
+Entrepôts
+
+Bureaux
+
+Parkings</p>
+</div>
+<!-- CAMERA FULLCOLORS AUDIO -->
+<div class="item design"> 
+    <img src="image/camera/CAMERA8.jpeg"> <img src="image/camera/camera15.jpeg"><img src="image/camera/camera16.jpeg"><img src="image/camera/camera17.jpeg">
+<h2 style="margin-top:60px;color:#ca7c07;">CAMERA DAHUA FULL-COLORS AUDIO</h2>
+<p>Caméra de Surveillance Full Color avec Audio
+
+Offrez à votre maison ou votre entreprise une sécurité avancée avec notre caméra Full Color avec audio intégré. Contrairement aux caméras classiques en noir et blanc la nuit, cette technologie permet une vision en couleur 24h/24, même dans l’obscurité.
+
+🔥 Caractéristiques principales :
+
+🎥 Vision Full Color jour et nuit
+Image claire et détaillée même en faible luminosité.
+
+🎤 Microphone intégré (Audio)
+Enregistrement du son en temps réel pour une surveillance complète (image + voix).
+
+🌙 Éclairage LED intelligent
+Activation automatique en cas de détection de mouvement.
+
+📱 Accès à distance via smartphone
+Visualisation en direct depuis votre téléphone (Android / iPhone).
+
+💾 Enregistrement sécurisé
+Compatible carte mémoire ou enregistreur DVR/NVR.
+
+🌧️ Résistante aux intempéries
+Idéale pour l’extérieur comme pour l’intérieur.
+
+✅ Idéale pour :
+
+Maisons
+
+Boutiques
+
+Magasins
+
+Bureaux
+
+Entrepôts</p>
+
+</div>
+<!-- CAMERA SOLAIRE-->
+ <div class="item design">
+    <img src="image/camera/camera2.png"><img src="image/camera/camera3.png"><img src="image/camera/camera7.jpeg">
+    <h2 style="margin-top:60px;color:#ca7c07;">CAMERA SOLAIRE 4G</h2>
+    <p>Caméra de Surveillance Solaire 4G Autonome
+
+La caméra solaire 4G est la solution idéale pour sécuriser vos espaces sans électricité ni Wi-Fi. Grâce à sa connexion 4G avec carte SIM et son panneau solaire intégré, elle fonctionne de manière totalement autonome.
+
+🔥 Caractéristiques principales :
+
+☀️ Alimentation solaire + batterie intégrée
+Fonctionne 24h/24 sans branchement électrique.
+
+📡 Connexion 4G LTE (Carte SIM)
+Surveillance à distance depuis n’importe où via Internet mobile.
+
+🎥 Haute définition (HD / Full HD)
+Images claires et détaillées.
+
+🌙 Vision nocturne infrarouge ou Full Color
+Surveillance efficace de jour comme de nuit.
+
+🎤 Audio intégré (micro + haut-parleur)
+Écoute et communication à distance.
+
+🚨 Détection de mouvement intelligente
+Notification instantanée sur votre téléphone.
+
+💧 Étanche (IP66/IP67)
+Résistante à la pluie et à la poussière.
+
+✅ Idéale pour :
+
+Chantiers
+
+Plantations / champs
+
+Magasins isolés
+
+Villas en construction
+
+Parkings
+
+Entrepôts
+
+ Avantages principaux :
+
+✔ Pas besoin d’électricité
+✔ Pas besoin de Wi-Fi
+✔ Surveillance depuis votre smartphone </p>
+</div>
+ <!-- camera avec ecran -->
+<div class="item design">
+<img src="image/camera/camera21.jpeg"> 
+<img src="image/camera/camera19.jpeg">
+<img src="image/camera/camera22.jpeg">
+<img src="image/camera/camera23.jpeg">
+<img src="image/camera/camera24.jpeg">
+<img src="image/camera/camera25.jpeg">
+<h2 style="margin-top:60px;color:#f68403;">CAMERA SANS FILL</h2>
+<P>Les caméras Calus sans fil sont une solution de surveillance moderne, pratique et rapide à installer. Grâce à leur technologie sans fil avec point d’accès intégré, elles permettent la transmission des images sans câblage complexe.
+
+🔥 Caractéristiques principales :
+
+📡 Connexion sans fil (Point d’accès intégré)
+Les caméras communiquent directement avec le système via un réseau dédié sécurisé.
+
+⚡ Alimentation stable et sécurisée
+Fonctionne avec adaptateur secteur ou système d’alimentation optimisé selon le modèle.
+
+📱 Tablette intégrée pour la transmission des images
+Visualisation en temps réel directement sur la tablette fournie.
+Interface simple, claire et facile à utiliser.
+
+🎥 Haute résolution HD / Full HD
+Images nettes et détaillées.
+
+🌙 Vision nocturne performante
+Surveillance efficace de jour comme de nuit.
+
+🎤 Audio intégré (selon modèle)
+Enregistrement du son en plus de l’image.
+
+💾 Enregistrement sur disque ou carte mémoire
+Stockage sécurisé des vidéos.
+
+✅ Avantages :
+
+✔ pas de cable
+✔ Surveillance immédiate via tablette
+✔ Idéal pour boutiques, domiciles, bureaux et petit chantiers
+
+🎯 Idéal pour :
+
+Petit Magasins
+residence
+Villas
+
+Bureaux
+</P>
+</div>
+</div>
+
+<!-- GPS -->
+<h2 style="margin-top:60px;color:#f68403;">SOLUTION GPS</h2>
+<div class="gallery">
+<img src="image/gps/gps1.jpeg">
+<img src="image/gps/gps2.jpeg">
+<img src="image/gps/gps3.jpeg">
+<img src="image/gps/gps4.jpeg">
+<img src="image/gps/gps5.jpeg">
+</div>
+<!-- IMPRESSION ET PERSONNALISATION -->
+<h2 style="margin-top:60px;color:#f9a20b;">IMPRESSION ET PERSONNALISATION</h2>
+<div class="gallery">
+<img src="image/impression/imp1.jpeg">
+<img src="image/impression/imp2.jpeg">
+<img src="image/impression/imp3.jpeg">
+<img src="image/impression/imp4.jpeg">
+<img src="image/impression/imp5.jpeg">
+<img src="image/impression/imp6.jpeg">
+<img src="image/impression/imp7.jpeg">
+<img src="image/impression/imp8.jpeg">
+<img src="image/impression/imp9.jpeg">
+<img src="image/impression/imp10.jpeg">
+<img src="image/impression/imp11.jpeg">
+<img src="image/impression/imp12.jpeg">
+<img src="image/impression/imp13.jpeg">
+<img src="image/impression/imp14.jpeg">
+<img src="image/impression/imp15.jpeg">
+<img src="image/impression/imp16.jpeg">
+<img src="image/impression/imp17.jpeg">
+<img src="image/impression/imp18.jpeg">
+<img src="image/impression/imp19.jpeg">
+<img src="image/impression/imp20.jpeg">
+</div>
+</section>
+
+<section id="contact">
+<h2>Contactez-nous</h2>
+<form>
+<input type="text" placeholder="Votre nom" required>
+<input type="email" placeholder="Votre email" required>
+<textarea rows="5" placeholder="Votre message"></textarea>
+<button type="submit">Envoyer</button>
+</form>
+</section>
+
+<footer>
+<img src="image/pied.png" style="width:100%; max-width:1000px;">
+</footer>
+
+<a class="whatsapp" href="https://wa.me/2250704353785" target="_blank">WhatsApp</a>
+
+<script>
+/* SCROLL ANIMATION */
+const sections=document.querySelectorAll("section");
+window.addEventListener("scroll",()=>{
+sections.forEach(sec=>{
+const top=sec.getBoundingClientRect().top;
+if(top<window.innerHeight-100){
+sec.classList.add("show");
+}
+});
+});
+</script>
+
+</body>
+</html>
